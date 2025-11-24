@@ -1,50 +1,102 @@
-# Welcome to your Expo app 👋
+## 🍽️ Foods – Delivery App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo de delivery moderno desenvolvido com Expo, React Native, Expo Router e NativeWind, combinando performance, organização e rapidez no desenvolvimento.
+Inclui também uma API fake usando json-server para facilitar testes durante o desenvolvimento.
 
-## Get started
+## 🚀 Tecnologias utilizadas
 
-1. Install dependencies
+- **Expo** (SDK 50+)
+- **React Native**
+- **Expo Router** (file-based routing)
+- **TypeScript**
+- **NativeWind** + `react-native-css-interop` (Tailwind no React Native)
+- **json-server** (API fake via arquivo `db.json`)
+
+## 📦 Como Executar o Projeto
+1. Instalar dependências
 
    ```bash
    npm install
    ```
-
-2. Start the app
-
+   ou
    ```bash
-   npx expo start
+   yarn
+   ```
+   
+2. Iniciar o app
+   ```bash
+   yarn
    ```
 
-In the output, you'll find options to open the app in a
+## 🌐 Rodando o Servidor Fake API
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+Instalar json-server
+   ```bash
+ npm install -g json-server
+   ```
+   ou
+   ```bash
+npm install json-server --save-dev
+   ```
+Iniciar o servidor
+   ```bash
+ npx json-server db.json
+   ```
+API disponível em:
 ```bash
-npm run reset-project
+http://localhost:3000
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🎨 Estilização com NativeWind
 
-## Learn more
+```
+import { Text, View } from "react-native";
 
-To learn more about developing your project with Expo, look at the following resources:
+export function Example() {
+  return (
+    <View className="flex-1 items-center justify-center bg-slate-950">
+      <Text className="text-2xl font-semibold text-amber-400">
+        Hello, NativeWind 👋
+      </Text>
+    </View>
+  );
+}
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```
 
-## Join the community
+## 🗂 Estrutura do Projeto
 
-Join our community of developers creating universal apps.
+```
+.
+├── src
+│   ├── app
+│   │   ├── _layout.tsx      # Layout raiz (Expo Router)
+│   │   └── index.tsx        # Tela inicial (Home)
+│   ├── components           # Componentes reutilizáveis
+│   └── ...
+├── assets                   # Imagens, ícones
+├── db.json                  # Banco fake (json-server)
+├── global.css               # Configuração NativeWind/Tailwind
+├── tailwind.config.js       # Config Tailwind
+└── ...
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+📚 Links úteis
+
+- **Documentação do Expo** → https://docs.expo.dev  
+- **Expo Router – File-based routing** → https://docs.expo.dev/router/introduction  
+- **Documentação do NativeWind** → https://www.nativewind.dev  
+- **json-server no GitHub** → https://github.com/typicode/json-server
+
+
+
+## 🤝 Contribuindo
+
+Sinta-se à vontade para:
+* Questões em aberto
+* Sugira melhorias
+* Adicionar novas telas usando o NativeWind
+* Estenda a db.json com novos endpoints de API
+
+
